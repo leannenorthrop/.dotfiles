@@ -1,6 +1,6 @@
 [user]
 	name = Leanne Northrop
-	email = 
+	email = leanne.northrop@gmail.com
 [core]
 	editor = vim
 	pager = diff-so-fancy | less --tabs=4 -RFX
