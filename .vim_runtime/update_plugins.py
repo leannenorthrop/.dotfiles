@@ -54,6 +54,7 @@ vim-wordy https://github.com/reedes/vim-wordy
 vim-eunch https://github.com/tpope/vim-eunuch
 vim-markdown https://github.com/plasticboy/vim-markdown
 tabular https://github.com/godlygeek/tabular
+vim-tmux-focus-events https://github.com/tmux-plugins/vim-tmux-focus-events.git
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
