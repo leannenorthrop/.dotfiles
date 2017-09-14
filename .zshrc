@@ -280,6 +280,8 @@ alias gentags="ctags -R -f ./.git/tags . && sbt gen-ctags"
 alias vi="vim"
 alias todo="todotxt-machine"
 alias config='/usr/bin/git --git-dir=/home/flower/.dotfiles/ --work-tree=/home/flower'
+alias uppowerlevel='cd ~ && config subtree pull --prefix .oh-my-zsh/custom/themes/powerlevel9k powerlevel9k master'
+alias upzsh='cd ~ && config subtree pull --prefix .oh-my-zsh oh-my-zsh master'
 
 # Key binding
 zmodload zsh/terminfo
