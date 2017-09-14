@@ -185,6 +185,7 @@ function shortShowStatus
 {
   checkLastPomodoro
   statusIcon
+  TODO=$(sort ~/.todo.txt | head -n 1)
   if [ -z $NO_RECORDS ]; then
     if [ "$POMODORO_FINISHED" == "1" ]; then
       if (( $BREAK_SECONDS_ELAPSED < $POMODORO_BREAK_IN_SECONDS )); then
@@ -210,11 +211,11 @@ function shortShowStatus
       fi
 
       TIME=$(printf '%dm:%ds' $(($REMAINING%3600/60)) $(($REMAINING%60)))
-      echo -e "$ICON $TIME"
+      echo -e "$ICON $TIME  $TODO"
     else
       REMAINING=$((POMODORO_LENGTH_IN_SECONDS - SECONDS_ELAPSED))
       TIME=$(printf '%dm:%ds' $(($REMAINING%3600/60)) $(($REMAINING%60)))
-      echo -e "$ICON $TIME"
+      echo -e "$ICON $TIME  $TODO"
     fi
   fi
 }

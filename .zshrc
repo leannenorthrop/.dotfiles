@@ -278,7 +278,7 @@ function gc() { echo "On $(gb), commiting $(gb)" && git commit -e -m $(gb) }
 alias gup="git fetch upstream && git checkout master && git merge upstream/master"
 alias gentags="ctags -R -f ./.git/tags . && sbt gen-ctags"
 alias vi="vim"
-alias todo="todotxt-machine"
+alias todo="todotxt-machine --config ~/.todotxt-machinerc"
 alias config='/usr/bin/git --git-dir=/home/flower/.dotfiles/ --work-tree=/home/flower'
 alias uppowerlevel='cd ~ && config subtree pull --prefix .oh-my-zsh/custom/themes/powerlevel9k powerlevel9k master'
 alias upzsh='cd ~ && config subtree pull --prefix .oh-my-zsh oh-my-zsh master'
