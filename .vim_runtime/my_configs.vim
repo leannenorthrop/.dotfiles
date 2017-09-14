@@ -25,22 +25,25 @@ map <C-n> :tn<CR>
 map <C-p> :tp<CR>
 
 " CTags
-set tags=tags-dep,./tags;,tags
+set tags=tags-dep,./tags;,tags;
 
 " Colors
-set t_Co=256
+set background=dark
+"set t_Co=256
 "uncomment next two lines if using in tmux
 "set t_8f=\[[38;2;%lu;%lu;%lum
 "set t_8b=\[[48;2;%lu;%lu;%lum
-set termguicolors
-set background=dark
+"set termguicolors
+"set background=dark
 set colorcolumn=160
-let g:solarized_termtrans=1
-let g:solarized_statusline="low"
-let g:solarized_diffmode="high"
-let g:solarized_term_italics=0
-color solarized8_dark_sea
+let g:airline_theme='alduin'
+"let g:solarized_termtrans=1
+"let g:solarized_statusline="low"
+"let g:solarized_diffmode="high"
+"let g:solarized_term_italics=0
+"color solarized8_dark_sea
 "color gruvbox
+color noctu
 
 :GitGutterAll
 set number

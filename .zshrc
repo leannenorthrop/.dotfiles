@@ -252,7 +252,7 @@ bindkey -M vicmd j history-substring-search-down
 autoload -U promptinit; promptinit
 
 # Exports
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"
+export SBT_OPTS="-Xmx1024m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1024m -Xss1M  -Duser.timezone=GMT"
 export PATH=~/bin:$PATH
 export EDITOR="vim"
 export VISUAL="vim"
@@ -261,6 +261,8 @@ export LANG=en_UK.UTF-8
 export LC_CTYPE=en_UK.UTF-8
 export LC_ALL=en_UK.UTF-8
 export CLICOLOR=1
+export WORKSPACE=/home/flower/dev/
+export JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
 
 # Source
 source /home/flower/.oh-my-zsh/oh-my-zsh.sh
