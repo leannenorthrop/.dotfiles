@@ -40,6 +40,10 @@ pomodoro() {
    local color="%F{green}"
    echo -e "$color$pstatus"
   fi
+  if [[ "$pstatus" =~ "^" ]]; then
+   local color="%F{blue}"
+   echo -e "$color$pstatus"
+  fi
   if [[ "$pstatus" =~ "^" ]]; then
    local color="%F{red}"
    echo -e "$color$pstatus"
