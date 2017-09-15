@@ -17,15 +17,13 @@ map <Leader>g :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " map <Leader><Leader> :!clear<CR>:exe '!cat %'<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gc :Gread<CR>
-nnoremap <S-Right> <C-]>
-vnoremap <S-Right> <C-]>
-nnoremap <S-Left> <C-T>
-vnoremap <S-Left> <C-T>
-map <C-n> :tn<CR>
-map <C-p> :tp<CR>
+nnoremap <C-[> <C-T> 
+vnoremap <C-[> <C-T> 
+map <C-tn> :tn<CR>
+map <C-tp> :tp<CR>
 
 " CTags
-set tags=tags-dep,./tags;,tags;
+set tags=tags-dep,./tags,.git/tags,./tags-dep;,tags;
 
 " Colors
 set background=dark

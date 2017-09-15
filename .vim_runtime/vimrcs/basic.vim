@@ -228,41 +228,41 @@ map <C-l> <C-W>l
 " map <leader>bl :ls<cr>
 
 " Close all the buffers
-nnoremap <silent> ]bc :bufdo bd<cr>
-nnoremap <silent> ]bn :enew<cr>
-nnoremap <silent> ]b :bnext<cr>
-nnoremap <silent> [b :bprevious<cr>
-nnoremap <silent> ]B :blast<cr>
-nnoremap <silent> [B :bfirst<cr>
-nnoremap <silent> ]bl :ls<cr>
+nnoremap <leader>bd :bufdo bd<cr>
+nnoremap <leader>bn :enew<cr>
+nnoremap <leader>bb :bnext<cr>
+nnoremap <leader>bp :bprevious<cr>
+nnoremap <leader>bl :blast<cr>
+nnoremap <leader>bf :bfirst<cr>
+nnoremap <leader>bls :ls<cr>
 
 
 " Useful mappings for managing tabs
-" map <leader>tn :tabnew<cr>
-" map <leader>to :tabonly<cr>
-" map <leader>tc :tabclose<cr>
-" map <leader>tm :tabmove
-" map <leader>t<leader> :tabnext
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
 
 " Let 'tl' toggle between this and the last accessed tab
-" let g:lasttab = 1
-" nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-" au TabLeave * let g:lasttab = tabpagenr()
+let g:lasttab = 1
+nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
 
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-" map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers
-" try
-"   set switchbuf=useopen,usetab,newtab
-"   set stal=2
-" catch
-" endtry
+try
+  set switchbuf=useopen,usetab,newtab
+  set stal=2
+catch
+endtry
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -285,10 +285,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 map 0 ^
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nmap <C-j> mz:m+<cr>`z
+nmap <C-k> mz:m-2<cr>`z
+vmap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
